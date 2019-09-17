@@ -1,11 +1,17 @@
 {
 	"name": "taiyi-util",
 	"version": "0.1.3",
+<<<<<<< HEAD
 	"description": "太一工具集",
 	"main": "./lib/index.js",
 	"repository": "https://github.com/taiyicn/util.git",
 	"author": "neozhang <neozhang@cool33.com>",
 	"license": "MIT",
+=======
+	"description": "太一Gulp扩展",
+	"license": "MIT",
+	"main": "./lib/index.js",
+>>>>>>> e109487f5e5d8bb8624950ca4e44778d0baacb1d
 	"scripts": {
 		"compile": "tsc -p tsconfig.build.json",
 		"test": "mocha --reporter spec",
@@ -16,6 +22,7 @@
 	"devDependencies": {
 		"@types/node": "^12.7.5",
 		"@types/rimraf": "^2.0.2",
+<<<<<<< HEAD
 		"@types/through": "0.0.29"
 	},
 	"dependencies": {
@@ -23,5 +30,14 @@
 		"expect": "^24.9.0",
 		"mocha": "^6.2.0",
 		"rimraf": "2.6.3"
+=======
+		"@types/through": "^0.0.29",
+		"typescript": "^3.6.3"
+	},
+	"dependencies": {
+		"event-stream": "^4.0.1",
+		"mocha": "^6.2.0",
+		"rimraf": "^3.0.0"
+>>>>>>> e109487f5e5d8bb8624950ca4e44778d0baacb1d
 	}
 }
