@@ -1,6 +1,5 @@
 import * as path from 'path';
 import * as fs from 'fs';
-<<<<<<< HEAD
 import * as es from 'event-stream';
 import * as _rimraf from 'rimraf';
 import { ThroughStream } from 'through';
@@ -52,38 +51,6 @@ export function toFileUri(filePath: string): string {
 		filePath = '/' + match[1].toUpperCase() + ':' + match[2];
 	}
 	return 'file://' + filePath.replace(/\\/g, '/');
-=======
-import * as _rimraf from 'rimraf';
-import * as es from 'event-stream';
-import { ThroughStream } from 'through';
-import * as ts from 'typescript';
-
-/**
- * 删除指定目录
- *
- * @export {}
- * @param {string} dir 目录路径
- * @returns {object} taskName,cb(err:any):void
- */
-export function rimraf(dir: string): (cb: any) => void {
-	let retries = 0;
-
-	const retry = (cb: (err?: any) => void) => {
-		_rimraf(dir, { maxBusyTries: 1 }, (err: any) => {
-			if (!err) {
-				return cb();
-			}
-
-			if (err.code === 'ENOTEMPTY' && ++retries < 5) {
-				return setTimeout(() => retry(cb), 10);
-			}
-
-			return cb(err);
-		});
-	};
-	retry.taskName = `clean-${path.basename(dir).toLowerCase()}`;
-	return retry;
->>>>>>> e109487f5e5d8bb8624950ca4e44778d0baacb1d
 }
 
 export interface FilterStream extends NodeJS.ReadWriteStream {

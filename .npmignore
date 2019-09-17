@@ -2,10 +2,6 @@
 src/
 node_modules/
 test/
-<<<<<<< HEAD
-=======
-dist/
->>>>>>> e109487f5e5d8bb8624950ca4e44778d0baacb1d
 
 # 忽略文件
 .gitignore
